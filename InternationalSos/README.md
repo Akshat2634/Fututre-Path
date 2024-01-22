@@ -10,9 +10,3 @@ This project uses natural language queries to generate precise and relevant Grap
 - [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) library installed
 - [Requests](https://docs.python-requests.org/en/master/) library installed
 
-### Installation
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/your-username/InternationalSos.git
