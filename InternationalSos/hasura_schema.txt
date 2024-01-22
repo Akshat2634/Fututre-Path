@@ -1,0 +1,381 @@
+schema  { query: query_root subscription: subscription_root }
+
+scalar Timestamp
+
+type __Directive { args: __InputValue
+  description: String!
+  isRepeatable: String!
+  locations: String!
+  name: String!
+}
+
+type __EnumValue { deprecationReason: String!
+  description: String!
+  isDeprecated: String!
+  name: String!
+}
+
+type __Field { args: __InputValue
+  deprecationReason: String!
+  description: String!
+  isDeprecated: String!
+  name: String!
+  type: __Type
+}
+
+type __InputValue { defaultValue: String!
+  description: String!
+  name: String!
+  type: __Type
+}
+
+type __Schema { description: String!
+  directives: __Directive
+  mutationType: __Type
+  queryType: __Type
+  subscriptionType: __Type
+  types: __Type
+}
+
+type __Type { description: String!
+  enumValues(includeDeprecated: Boolean = false): __EnumValue
+  fields(includeDeprecated: Boolean = false): __Field
+  inputFields: __InputValue
+  interfaces: __Type
+  kind: __TypeKind!
+  name: String!
+  ofType: __Type
+  possibleTypes: __Type
+}
+
+type query_root { "fetch aggregated fields from the table: \"intsosdataset.finance\"" 
+intsosdataset_finance_aggregate("filter the rows returned" 
+where: intsosdataset_finance_bool_exp, "sort the rows by one or more columns" 
+order_by: [intsosdataset_finance_order_by!], "limit the number of rows returned" 
+limit: Int, "skip the first n rows. Use only with order_by" 
+offset: Int, "distinct select on columns" 
+distinct_on: [intsosdataset_finance_select_column!]): intsosdataset_finance_aggregate!
+  "fetch data from the table: \"intsosdataset.finance\"" 
+intsosdataset_finance("filter the rows returned" 
+where: intsosdataset_finance_bool_exp, "sort the rows by one or more columns" 
+order_by: [intsosdataset_finance_order_by!], "limit the number of rows returned" 
+limit: Int, "skip the first n rows. Use only with order_by" 
+offset: Int, "distinct select on columns" 
+distinct_on: [intsosdataset_finance_select_column!]): [intsosdataset_finance!]!
+}
+
+type subscription_root { "fetch aggregated fields from the table: \"intsosdataset.finance\"" 
+intsosdataset_finance_aggregate("filter the rows returned" 
+where: intsosdataset_finance_bool_exp, "sort the rows by one or more columns" 
+order_by: [intsosdataset_finance_order_by!], "limit the number of rows returned" 
+limit: Int, "skip the first n rows. Use only with order_by" 
+offset: Int, "distinct select on columns" 
+distinct_on: [intsosdataset_finance_select_column!]): intsosdataset_finance_aggregate!
+  "fetch data from the table: \"intsosdataset.finance\"" 
+intsosdataset_finance("filter the rows returned" 
+where: intsosdataset_finance_bool_exp, "sort the rows by one or more columns" 
+order_by: [intsosdataset_finance_order_by!], "limit the number of rows returned" 
+limit: Int, "skip the first n rows. Use only with order_by" 
+offset: Int, "distinct select on columns" 
+distinct_on: [intsosdataset_finance_select_column!]): [intsosdataset_finance!]!
+}
+
+"aggregate avg on columns" 
+type intsosdataset_finance_avg_fields { central_index_key: Float
+  date_filed: Float
+  fiscal_year: Float
+  number_of_quarters: Float
+  value: Float
+}
+
+"aggregate fields of \"intsosdataset.finance\"" 
+type intsosdataset_finance_aggregate_fields { avg: intsosdataset_finance_avg_fields
+  count(distinct: Boolean, columns: [intsosdataset_finance_select_column!]): Int!
+  max: intsosdataset_finance_max_fields
+  min: intsosdataset_finance_min_fields
+  stddev: intsosdataset_finance_stddev_fields
+  stddev_pop: intsosdataset_finance_stddev_pop_fields
+  stddev_samp: intsosdataset_finance_stddev_samp_fields
+  sum: intsosdataset_finance_sum_fields
+  var_pop: intsosdataset_finance_var_pop_fields
+  var_samp: intsosdataset_finance_var_samp_fields
+  variance: intsosdataset_finance_variance_fields
+}
+
+"aggregate max on columns" 
+type intsosdataset_finance_max_fields { central_index_key: Int
+  company_name: String
+  date_accepted: Timestamp
+  date_filed: Int
+  ein: String
+  fiscal_period_focus: String
+  fiscal_year: Int
+  fiscal_year_end: String
+  form: String
+  measure_tag: String
+  number_of_quarters: Int
+  period_end_date: String
+  sic: String
+  submission_number: String
+  units: String
+  value: Float
+  version: String
+}
+
+"aggregate min on columns" 
+type intsosdataset_finance_min_fields { central_index_key: Int
+  company_name: String
+  date_accepted: Timestamp
+  date_filed: Int
+  ein: String
+  fiscal_period_focus: String
+  fiscal_year: Int
+  fiscal_year_end: String
+  form: String
+  measure_tag: String
+  number_of_quarters: Int
+  period_end_date: String
+  sic: String
+  submission_number: String
+  units: String
+  value: Float
+  version: String
+}
+
+"aggregate stddev on columns" 
+type intsosdataset_finance_stddev_fields { central_index_key: Float
+  date_filed: Float
+  fiscal_year: Float
+  number_of_quarters: Float
+  value: Float
+}
+
+"aggregate stddev_pop on columns" 
+type intsosdataset_finance_stddev_pop_fields { central_index_key: Float
+  date_filed: Float
+  fiscal_year: Float
+  number_of_quarters: Float
+  value: Float
+}
+
+"aggregate stddev_samp on columns" 
+type intsosdataset_finance_stddev_samp_fields { central_index_key: Float
+  date_filed: Float
+  fiscal_year: Float
+  number_of_quarters: Float
+  value: Float
+}
+
+"aggregate sum on columns" 
+type intsosdataset_finance_sum_fields { central_index_key: Int
+  date_filed: Int
+  fiscal_year: Int
+  number_of_quarters: Int
+  value: Float
+}
+
+"aggregate var_pop on columns" 
+type intsosdataset_finance_var_pop_fields { central_index_key: Float
+  date_filed: Float
+  fiscal_year: Float
+  number_of_quarters: Float
+  value: Float
+}
+
+"aggregate var_samp on columns" 
+type intsosdataset_finance_var_samp_fields { central_index_key: Float
+  date_filed: Float
+  fiscal_year: Float
+  number_of_quarters: Float
+  value: Float
+}
+
+"aggregate variance on columns" 
+type intsosdataset_finance_variance_fields { central_index_key: Float
+  date_filed: Float
+  fiscal_year: Float
+  number_of_quarters: Float
+  value: Float
+}
+
+"aggregated selection of \"intsosdataset.finance\"" 
+type intsosdataset_finance_aggregate { aggregate: intsosdataset_finance_aggregate_fields
+  nodes: [intsosdataset_finance!]!
+}
+
+"columns and relationships of \"intsosdataset.finance\"" 
+type intsosdataset_finance { central_index_key: Int
+  company_name: String
+  date_accepted: Timestamp
+  date_filed: Int
+  ein: String
+  fiscal_period_focus: String
+  fiscal_year: Int
+  fiscal_year_end: String
+  form: String
+  measure_tag: String!
+  number_of_quarters: Int!
+  period_end_date: String!
+  sic: String
+  submission_number: String!
+  units: String!
+  value: Float
+  version: String!
+}
+
+enum __TypeKind {ENUM 
+  INPUT_OBJECT 
+  INTERFACE 
+  LIST 
+  NON_NULL 
+  OBJECT 
+  SCALAR 
+  UNION 
+}
+
+"column ordering options" 
+enum order_by {"in ascending order, nulls first" 
+asc 
+  "in ascending order, nulls first" 
+asc_nulls_first 
+  "in ascending order, nulls last" 
+asc_nulls_last 
+  "in descending order, nulls first" 
+desc_nulls_first 
+  "in descending order, nulls last" 
+desc 
+  "in descending order, nulls last" 
+desc_nulls_last 
+}
+
+"select columns of table \"intsosdataset.finance\"" 
+enum intsosdataset_finance_select_column {"column name" 
+central_index_key 
+  "column name" 
+company_name 
+  "column name" 
+date_accepted 
+  "column name" 
+date_filed 
+  "column name" 
+ein 
+  "column name" 
+fiscal_period_focus 
+  "column name" 
+fiscal_year 
+  "column name" 
+fiscal_year_end 
+  "column name" 
+form 
+  "column name" 
+measure_tag 
+  "column name" 
+number_of_quarters 
+  "column name" 
+period_end_date 
+  "column name" 
+sic 
+  "column name" 
+submission_number 
+  "column name" 
+units 
+  "column name" 
+value 
+  "column name" 
+version 
+}
+
+"Boolean expression to compare columns of type \"Float\". All fields are combined with logical 'AND'." 
+input Float_BigQuery_comparison_exp {_eq: Float
+  _gt: Float
+  _gte: Float
+  _in: [Float!]
+  _is_null: Boolean
+  _lt: Float
+  _lte: Float
+  _neq: Float
+  _nin: [Float!]
+}
+
+"Boolean expression to compare columns of type \"Int\". All fields are combined with logical 'AND'." 
+input Int_BigQuery_comparison_exp {_eq: Int
+  _gt: Int
+  _gte: Int
+  _in: [Int!]
+  _is_null: Boolean
+  _lt: Int
+  _lte: Int
+  _neq: Int
+  _nin: [Int!]
+}
+
+"Boolean expression to compare columns of type \"String\". All fields are combined with logical 'AND'." 
+input String_BigQuery_comparison_exp {_eq: String
+  _gt: String
+  _gte: String
+  _in: [String!]
+  _is_null: Boolean
+  _lt: String
+  _lte: String
+  _neq: String
+  _nin: [String!]
+  "does the column NOT match the given pattern" 
+_nlike: String
+  "does the column match the given pattern" 
+_like: String
+}
+
+"Boolean expression to compare columns of type \"Timestamp\". All fields are combined with logical 'AND'." 
+input Timestamp_BigQuery_comparison_exp {_eq: Timestamp
+  _gt: Timestamp
+  _gte: Timestamp
+  _in: [Timestamp!]
+  _is_null: Boolean
+  _lt: Timestamp
+  _lte: Timestamp
+  _neq: Timestamp
+  _nin: [Timestamp!]
+}
+
+"Boolean expression to filter rows from the table \"intsosdataset.finance\". All fields are combined with a logical 'AND'." 
+input intsosdataset_finance_bool_exp {_and: [intsosdataset_finance_bool_exp!]
+  _not: intsosdataset_finance_bool_exp
+  _or: [intsosdataset_finance_bool_exp!]
+  central_index_key: Int_BigQuery_comparison_exp
+  company_name: String_BigQuery_comparison_exp
+  date_accepted: Timestamp_BigQuery_comparison_exp
+  date_filed: Int_BigQuery_comparison_exp
+  ein: String_BigQuery_comparison_exp
+  fiscal_period_focus: String_BigQuery_comparison_exp
+  fiscal_year: Int_BigQuery_comparison_exp
+  fiscal_year_end: String_BigQuery_comparison_exp
+  form: String_BigQuery_comparison_exp
+  measure_tag: String_BigQuery_comparison_exp
+  number_of_quarters: Int_BigQuery_comparison_exp
+  period_end_date: String_BigQuery_comparison_exp
+  sic: String_BigQuery_comparison_exp
+  submission_number: String_BigQuery_comparison_exp
+  units: String_BigQuery_comparison_exp
+  value: Float_BigQuery_comparison_exp
+  version: String_BigQuery_comparison_exp
+}
+
+"Ordering options when selecting data from \"intsosdataset.finance\"." 
+input intsosdataset_finance_order_by {central_index_key: order_by
+  company_name: order_by
+  date_accepted: order_by
+  date_filed: order_by
+  ein: order_by
+  fiscal_period_focus: order_by
+  fiscal_year: order_by
+  fiscal_year_end: order_by
+  form: order_by
+  measure_tag: order_by
+  number_of_quarters: order_by
+  period_end_date: order_by
+  sic: order_by
+  submission_number: order_by
+  units: order_by
+  value: order_by
+  version: order_by
+}
