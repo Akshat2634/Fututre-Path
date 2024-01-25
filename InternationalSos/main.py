@@ -17,10 +17,11 @@ hasura_admin_secret = "1F5fMJXlnIbL1ku10HSEw4d6HnX2g7kAz7H887cDAAjwVqKaZ3DKuCo0K
 
 # English Question
 nlp_query = input("Enter your question: ")
-# How do the fiscal year-end dates vary across different companies?
-# What are the common units of measure used in filings?
-# How do the fiscal year-end dates vary across different companies?
-# What are the latest filings?
+# What is the aggregated balance for the 'ISOS_goog_balance_sheet_statement_annual' table?
+# Can you provide the aggregate income statement for the 'ISOS_goog_income_statement_annual' table?
+# What is the average balance for each fiscal year in the 'ISOS_goog_balance_sheet_statement_annual' table?
+# What is the average income for each fiscal year in the 'ISOS_goog_income_statement_annual' table?
+# Can you identify any noticeable trends or patterns in the financial data over the years based on the 'ISOS_goog_balance_sheet_statement_annual' and 'ISOS_goog_income_statement_annual' tables?
 
 system_prompt_start = """Assistant, your task is to help generate a precise and relevant GraphQL query.
 You will be given a database schema and a natural language query from a user.
@@ -30,8 +31,8 @@ that can be used to fetch data from a database as per the user's intent.
 
 Please note the expected format of the user's query and consider the following key concepts in the schema:
 
-- Schema Structure: query_root, subscription_root, intsosdataset_finance, etc.
-- Data Types: Int, String, Float, Timestamp
+- Schema Structure: query_root, subscription_root, intsosdataset_ISOS_goog_balance_sheet_statement_annual, intsosdataset_ISOS_goog_income_statement_annual, etc.
+- Data Types: Int, String, Float
 - Filtering: Use of where in queries for filtering rows
 - Sorting: Use of order_by in queries for sorting rows
 - Aggregation: Aggregate functions and fields for data aggregation
@@ -39,12 +40,12 @@ Please note the expected format of the user's query and consider the following k
 Please consider the following key points:
 
 1. User Query: '{nlp_query}'
-   - The user is interested in identifying industry trends based on the Standard Industrial Classification (SIC).
-   - The GraphQL query should focus on querying the 'intsosdataset_finance' table.
+   - The user is interested in fetching data from the 'intsosdataset.ISOS_goog_balance_sheet_statement_annual' and 'intsosdataset.ISOS_goog_income_statement_annual' tables.
+   - The GraphQL query should focus on aggregating data based on the specified filters, sorting, and limiting the number of rows returned.
 
 2. Schema Overview:
-   - The 'intsosdataset_finance' table has columns like 'sic', 'fiscal_year', 'value', and 'measure_tag'.
-   - Use filtering, sorting, and aggregation as needed.
+   - The 'intsosdataset.ISOS_goog_balance_sheet_statement_annual' and 'intsosdataset.ISOS_goog_income_statement_annual' tables have columns like '_2018_12_31_FY', '_2019_12_31_FY', '_2020_12_31_FY', 'date', and 'string_field_1'.
+   - Utilize filtering, sorting, and aggregation as needed.
 
 3. Query Structure:
    - Ensure the query adheres to GraphQL syntax.

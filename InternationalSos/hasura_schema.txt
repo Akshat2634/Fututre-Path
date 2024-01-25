@@ -1,7 +1,5 @@
 schema  { query: query_root subscription: subscription_root }
 
-scalar Timestamp
-
 type __Directive { args: __InputValue
   description: String!
   isRepeatable: String!
@@ -48,179 +46,290 @@ type __Type { description: String!
   possibleTypes: __Type
 }
 
-type query_root { "fetch aggregated fields from the table: \"intsosdataset.finance\"" 
-intsosdataset_finance_aggregate("filter the rows returned" 
-where: intsosdataset_finance_bool_exp, "sort the rows by one or more columns" 
-order_by: [intsosdataset_finance_order_by!], "limit the number of rows returned" 
+type query_root { "fetch aggregated fields from the table: \"intsosdataset.ISOS_goog_balance_sheet_statement_annual\"" 
+intsosdataset_ISOS_goog_balance_sheet_statement_annual_aggregate("filter the rows returned" 
+where: intsosdataset_ISOS_goog_balance_sheet_statement_annual_bool_exp, "sort the rows by one or more columns" 
+order_by: [intsosdataset_ISOS_goog_balance_sheet_statement_annual_order_by!], "limit the number of rows returned" 
 limit: Int, "skip the first n rows. Use only with order_by" 
 offset: Int, "distinct select on columns" 
-distinct_on: [intsosdataset_finance_select_column!]): intsosdataset_finance_aggregate!
-  "fetch data from the table: \"intsosdataset.finance\"" 
-intsosdataset_finance("filter the rows returned" 
-where: intsosdataset_finance_bool_exp, "sort the rows by one or more columns" 
-order_by: [intsosdataset_finance_order_by!], "limit the number of rows returned" 
+distinct_on: [intsosdataset_ISOS_goog_balance_sheet_statement_annual_select_column!]): intsosdataset_ISOS_goog_balance_sheet_statement_annual_aggregate!
+  "fetch aggregated fields from the table: \"intsosdataset.ISOS_goog_income_statement_annual\"" 
+intsosdataset_ISOS_goog_income_statement_annual_aggregate("filter the rows returned" 
+where: intsosdataset_ISOS_goog_income_statement_annual_bool_exp, "sort the rows by one or more columns" 
+order_by: [intsosdataset_ISOS_goog_income_statement_annual_order_by!], "limit the number of rows returned" 
 limit: Int, "skip the first n rows. Use only with order_by" 
 offset: Int, "distinct select on columns" 
-distinct_on: [intsosdataset_finance_select_column!]): [intsosdataset_finance!]!
+distinct_on: [intsosdataset_ISOS_goog_income_statement_annual_select_column!]): intsosdataset_ISOS_goog_income_statement_annual_aggregate!
+  "fetch data from the table: \"intsosdataset.ISOS_goog_balance_sheet_statement_annual\"" 
+intsosdataset_ISOS_goog_balance_sheet_statement_annual("filter the rows returned" 
+where: intsosdataset_ISOS_goog_balance_sheet_statement_annual_bool_exp, "sort the rows by one or more columns" 
+order_by: [intsosdataset_ISOS_goog_balance_sheet_statement_annual_order_by!], "limit the number of rows returned" 
+limit: Int, "skip the first n rows. Use only with order_by" 
+offset: Int, "distinct select on columns" 
+distinct_on: [intsosdataset_ISOS_goog_balance_sheet_statement_annual_select_column!]): [intsosdataset_ISOS_goog_balance_sheet_statement_annual!]!
+  "fetch data from the table: \"intsosdataset.ISOS_goog_income_statement_annual\"" 
+intsosdataset_ISOS_goog_income_statement_annual("filter the rows returned" 
+where: intsosdataset_ISOS_goog_income_statement_annual_bool_exp, "sort the rows by one or more columns" 
+order_by: [intsosdataset_ISOS_goog_income_statement_annual_order_by!], "limit the number of rows returned" 
+limit: Int, "skip the first n rows. Use only with order_by" 
+offset: Int, "distinct select on columns" 
+distinct_on: [intsosdataset_ISOS_goog_income_statement_annual_select_column!]): [intsosdataset_ISOS_goog_income_statement_annual!]!
 }
 
-type subscription_root { "fetch aggregated fields from the table: \"intsosdataset.finance\"" 
-intsosdataset_finance_aggregate("filter the rows returned" 
-where: intsosdataset_finance_bool_exp, "sort the rows by one or more columns" 
-order_by: [intsosdataset_finance_order_by!], "limit the number of rows returned" 
+type subscription_root { "fetch aggregated fields from the table: \"intsosdataset.ISOS_goog_balance_sheet_statement_annual\"" 
+intsosdataset_ISOS_goog_balance_sheet_statement_annual_aggregate("filter the rows returned" 
+where: intsosdataset_ISOS_goog_balance_sheet_statement_annual_bool_exp, "sort the rows by one or more columns" 
+order_by: [intsosdataset_ISOS_goog_balance_sheet_statement_annual_order_by!], "limit the number of rows returned" 
 limit: Int, "skip the first n rows. Use only with order_by" 
 offset: Int, "distinct select on columns" 
-distinct_on: [intsosdataset_finance_select_column!]): intsosdataset_finance_aggregate!
-  "fetch data from the table: \"intsosdataset.finance\"" 
-intsosdataset_finance("filter the rows returned" 
-where: intsosdataset_finance_bool_exp, "sort the rows by one or more columns" 
-order_by: [intsosdataset_finance_order_by!], "limit the number of rows returned" 
+distinct_on: [intsosdataset_ISOS_goog_balance_sheet_statement_annual_select_column!]): intsosdataset_ISOS_goog_balance_sheet_statement_annual_aggregate!
+  "fetch aggregated fields from the table: \"intsosdataset.ISOS_goog_income_statement_annual\"" 
+intsosdataset_ISOS_goog_income_statement_annual_aggregate("filter the rows returned" 
+where: intsosdataset_ISOS_goog_income_statement_annual_bool_exp, "sort the rows by one or more columns" 
+order_by: [intsosdataset_ISOS_goog_income_statement_annual_order_by!], "limit the number of rows returned" 
 limit: Int, "skip the first n rows. Use only with order_by" 
 offset: Int, "distinct select on columns" 
-distinct_on: [intsosdataset_finance_select_column!]): [intsosdataset_finance!]!
+distinct_on: [intsosdataset_ISOS_goog_income_statement_annual_select_column!]): intsosdataset_ISOS_goog_income_statement_annual_aggregate!
+  "fetch data from the table: \"intsosdataset.ISOS_goog_balance_sheet_statement_annual\"" 
+intsosdataset_ISOS_goog_balance_sheet_statement_annual("filter the rows returned" 
+where: intsosdataset_ISOS_goog_balance_sheet_statement_annual_bool_exp, "sort the rows by one or more columns" 
+order_by: [intsosdataset_ISOS_goog_balance_sheet_statement_annual_order_by!], "limit the number of rows returned" 
+limit: Int, "skip the first n rows. Use only with order_by" 
+offset: Int, "distinct select on columns" 
+distinct_on: [intsosdataset_ISOS_goog_balance_sheet_statement_annual_select_column!]): [intsosdataset_ISOS_goog_balance_sheet_statement_annual!]!
+  "fetch data from the table: \"intsosdataset.ISOS_goog_income_statement_annual\"" 
+intsosdataset_ISOS_goog_income_statement_annual("filter the rows returned" 
+where: intsosdataset_ISOS_goog_income_statement_annual_bool_exp, "sort the rows by one or more columns" 
+order_by: [intsosdataset_ISOS_goog_income_statement_annual_order_by!], "limit the number of rows returned" 
+limit: Int, "skip the first n rows. Use only with order_by" 
+offset: Int, "distinct select on columns" 
+distinct_on: [intsosdataset_ISOS_goog_income_statement_annual_select_column!]): [intsosdataset_ISOS_goog_income_statement_annual!]!
 }
 
 "aggregate avg on columns" 
-type intsosdataset_finance_avg_fields { central_index_key: Float
-  date_filed: Float
-  fiscal_year: Float
-  number_of_quarters: Float
-  value: Float
+type intsosdataset_ISOS_goog_balance_sheet_statement_annual_avg_fields { _2018_12_31_FY: Float
+  _2019_12_31_FY: Float
+  _2020_12_31_FY: Float
+  _2021_12_31_FY: Float
+  _2022_12_31_FY: Float
 }
 
-"aggregate fields of \"intsosdataset.finance\"" 
-type intsosdataset_finance_aggregate_fields { avg: intsosdataset_finance_avg_fields
-  count(distinct: Boolean, columns: [intsosdataset_finance_select_column!]): Int!
-  max: intsosdataset_finance_max_fields
-  min: intsosdataset_finance_min_fields
-  stddev: intsosdataset_finance_stddev_fields
-  stddev_pop: intsosdataset_finance_stddev_pop_fields
-  stddev_samp: intsosdataset_finance_stddev_samp_fields
-  sum: intsosdataset_finance_sum_fields
-  var_pop: intsosdataset_finance_var_pop_fields
-  var_samp: intsosdataset_finance_var_samp_fields
-  variance: intsosdataset_finance_variance_fields
+"aggregate avg on columns" 
+type intsosdataset_ISOS_goog_income_statement_annual_avg_fields { _2018_12_31_FY: Float
+  _2019_12_31_FY: Float
+  _2020_12_31_FY: Float
+  _2021_12_31_FY: Float
+  _2022_12_31_FY: Float
+}
+
+"aggregate fields of \"intsosdataset.ISOS_goog_balance_sheet_statement_annual\"" 
+type intsosdataset_ISOS_goog_balance_sheet_statement_annual_aggregate_fields { avg: intsosdataset_ISOS_goog_balance_sheet_statement_annual_avg_fields
+  count(distinct: Boolean, columns: [intsosdataset_ISOS_goog_balance_sheet_statement_annual_select_column!]): Int!
+  max: intsosdataset_ISOS_goog_balance_sheet_statement_annual_max_fields
+  min: intsosdataset_ISOS_goog_balance_sheet_statement_annual_min_fields
+  stddev: intsosdataset_ISOS_goog_balance_sheet_statement_annual_stddev_fields
+  stddev_pop: intsosdataset_ISOS_goog_balance_sheet_statement_annual_stddev_pop_fields
+  stddev_samp: intsosdataset_ISOS_goog_balance_sheet_statement_annual_stddev_samp_fields
+  sum: intsosdataset_ISOS_goog_balance_sheet_statement_annual_sum_fields
+  var_pop: intsosdataset_ISOS_goog_balance_sheet_statement_annual_var_pop_fields
+  var_samp: intsosdataset_ISOS_goog_balance_sheet_statement_annual_var_samp_fields
+  variance: intsosdataset_ISOS_goog_balance_sheet_statement_annual_variance_fields
+}
+
+"aggregate fields of \"intsosdataset.ISOS_goog_income_statement_annual\"" 
+type intsosdataset_ISOS_goog_income_statement_annual_aggregate_fields { avg: intsosdataset_ISOS_goog_income_statement_annual_avg_fields
+  count(distinct: Boolean, columns: [intsosdataset_ISOS_goog_income_statement_annual_select_column!]): Int!
+  max: intsosdataset_ISOS_goog_income_statement_annual_max_fields
+  min: intsosdataset_ISOS_goog_income_statement_annual_min_fields
+  stddev: intsosdataset_ISOS_goog_income_statement_annual_stddev_fields
+  stddev_pop: intsosdataset_ISOS_goog_income_statement_annual_stddev_pop_fields
+  stddev_samp: intsosdataset_ISOS_goog_income_statement_annual_stddev_samp_fields
+  sum: intsosdataset_ISOS_goog_income_statement_annual_sum_fields
+  var_pop: intsosdataset_ISOS_goog_income_statement_annual_var_pop_fields
+  var_samp: intsosdataset_ISOS_goog_income_statement_annual_var_samp_fields
+  variance: intsosdataset_ISOS_goog_income_statement_annual_variance_fields
 }
 
 "aggregate max on columns" 
-type intsosdataset_finance_max_fields { central_index_key: Int
-  company_name: String
-  date_accepted: Timestamp
-  date_filed: Int
-  ein: String
-  fiscal_period_focus: String
-  fiscal_year: Int
-  fiscal_year_end: String
-  form: String
-  measure_tag: String
-  number_of_quarters: Int
-  period_end_date: String
-  sic: String
-  submission_number: String
-  units: String
-  value: Float
-  version: String
+type intsosdataset_ISOS_goog_balance_sheet_statement_annual_max_fields { _2018_12_31_FY: Int
+  _2019_12_31_FY: Int
+  _2020_12_31_FY: Int
+  _2021_12_31_FY: Int
+  _2022_12_31_FY: Int
+  date: String
+  string_field_1: String
+}
+
+"aggregate max on columns" 
+type intsosdataset_ISOS_goog_income_statement_annual_max_fields { _2018_12_31_FY: Float
+  _2019_12_31_FY: Float
+  _2020_12_31_FY: Float
+  _2021_12_31_FY: Float
+  _2022_12_31_FY: Float
+  date: String
+  string_field_1: String
 }
 
 "aggregate min on columns" 
-type intsosdataset_finance_min_fields { central_index_key: Int
-  company_name: String
-  date_accepted: Timestamp
-  date_filed: Int
-  ein: String
-  fiscal_period_focus: String
-  fiscal_year: Int
-  fiscal_year_end: String
-  form: String
-  measure_tag: String
-  number_of_quarters: Int
-  period_end_date: String
-  sic: String
-  submission_number: String
-  units: String
-  value: Float
-  version: String
+type intsosdataset_ISOS_goog_balance_sheet_statement_annual_min_fields { _2018_12_31_FY: Int
+  _2019_12_31_FY: Int
+  _2020_12_31_FY: Int
+  _2021_12_31_FY: Int
+  _2022_12_31_FY: Int
+  date: String
+  string_field_1: String
+}
+
+"aggregate min on columns" 
+type intsosdataset_ISOS_goog_income_statement_annual_min_fields { _2018_12_31_FY: Float
+  _2019_12_31_FY: Float
+  _2020_12_31_FY: Float
+  _2021_12_31_FY: Float
+  _2022_12_31_FY: Float
+  date: String
+  string_field_1: String
 }
 
 "aggregate stddev on columns" 
-type intsosdataset_finance_stddev_fields { central_index_key: Float
-  date_filed: Float
-  fiscal_year: Float
-  number_of_quarters: Float
-  value: Float
+type intsosdataset_ISOS_goog_balance_sheet_statement_annual_stddev_fields { _2018_12_31_FY: Float
+  _2019_12_31_FY: Float
+  _2020_12_31_FY: Float
+  _2021_12_31_FY: Float
+  _2022_12_31_FY: Float
+}
+
+"aggregate stddev on columns" 
+type intsosdataset_ISOS_goog_income_statement_annual_stddev_fields { _2018_12_31_FY: Float
+  _2019_12_31_FY: Float
+  _2020_12_31_FY: Float
+  _2021_12_31_FY: Float
+  _2022_12_31_FY: Float
 }
 
 "aggregate stddev_pop on columns" 
-type intsosdataset_finance_stddev_pop_fields { central_index_key: Float
-  date_filed: Float
-  fiscal_year: Float
-  number_of_quarters: Float
-  value: Float
+type intsosdataset_ISOS_goog_balance_sheet_statement_annual_stddev_pop_fields { _2018_12_31_FY: Float
+  _2019_12_31_FY: Float
+  _2020_12_31_FY: Float
+  _2021_12_31_FY: Float
+  _2022_12_31_FY: Float
+}
+
+"aggregate stddev_pop on columns" 
+type intsosdataset_ISOS_goog_income_statement_annual_stddev_pop_fields { _2018_12_31_FY: Float
+  _2019_12_31_FY: Float
+  _2020_12_31_FY: Float
+  _2021_12_31_FY: Float
+  _2022_12_31_FY: Float
 }
 
 "aggregate stddev_samp on columns" 
-type intsosdataset_finance_stddev_samp_fields { central_index_key: Float
-  date_filed: Float
-  fiscal_year: Float
-  number_of_quarters: Float
-  value: Float
+type intsosdataset_ISOS_goog_balance_sheet_statement_annual_stddev_samp_fields { _2018_12_31_FY: Float
+  _2019_12_31_FY: Float
+  _2020_12_31_FY: Float
+  _2021_12_31_FY: Float
+  _2022_12_31_FY: Float
+}
+
+"aggregate stddev_samp on columns" 
+type intsosdataset_ISOS_goog_income_statement_annual_stddev_samp_fields { _2018_12_31_FY: Float
+  _2019_12_31_FY: Float
+  _2020_12_31_FY: Float
+  _2021_12_31_FY: Float
+  _2022_12_31_FY: Float
 }
 
 "aggregate sum on columns" 
-type intsosdataset_finance_sum_fields { central_index_key: Int
-  date_filed: Int
-  fiscal_year: Int
-  number_of_quarters: Int
-  value: Float
+type intsosdataset_ISOS_goog_balance_sheet_statement_annual_sum_fields { _2018_12_31_FY: Int
+  _2019_12_31_FY: Int
+  _2020_12_31_FY: Int
+  _2021_12_31_FY: Int
+  _2022_12_31_FY: Int
+}
+
+"aggregate sum on columns" 
+type intsosdataset_ISOS_goog_income_statement_annual_sum_fields { _2018_12_31_FY: Float
+  _2019_12_31_FY: Float
+  _2020_12_31_FY: Float
+  _2021_12_31_FY: Float
+  _2022_12_31_FY: Float
 }
 
 "aggregate var_pop on columns" 
-type intsosdataset_finance_var_pop_fields { central_index_key: Float
-  date_filed: Float
-  fiscal_year: Float
-  number_of_quarters: Float
-  value: Float
+type intsosdataset_ISOS_goog_balance_sheet_statement_annual_var_pop_fields { _2018_12_31_FY: Float
+  _2019_12_31_FY: Float
+  _2020_12_31_FY: Float
+  _2021_12_31_FY: Float
+  _2022_12_31_FY: Float
+}
+
+"aggregate var_pop on columns" 
+type intsosdataset_ISOS_goog_income_statement_annual_var_pop_fields { _2018_12_31_FY: Float
+  _2019_12_31_FY: Float
+  _2020_12_31_FY: Float
+  _2021_12_31_FY: Float
+  _2022_12_31_FY: Float
 }
 
 "aggregate var_samp on columns" 
-type intsosdataset_finance_var_samp_fields { central_index_key: Float
-  date_filed: Float
-  fiscal_year: Float
-  number_of_quarters: Float
-  value: Float
+type intsosdataset_ISOS_goog_balance_sheet_statement_annual_var_samp_fields { _2018_12_31_FY: Float
+  _2019_12_31_FY: Float
+  _2020_12_31_FY: Float
+  _2021_12_31_FY: Float
+  _2022_12_31_FY: Float
+}
+
+"aggregate var_samp on columns" 
+type intsosdataset_ISOS_goog_income_statement_annual_var_samp_fields { _2018_12_31_FY: Float
+  _2019_12_31_FY: Float
+  _2020_12_31_FY: Float
+  _2021_12_31_FY: Float
+  _2022_12_31_FY: Float
 }
 
 "aggregate variance on columns" 
-type intsosdataset_finance_variance_fields { central_index_key: Float
-  date_filed: Float
-  fiscal_year: Float
-  number_of_quarters: Float
-  value: Float
+type intsosdataset_ISOS_goog_balance_sheet_statement_annual_variance_fields { _2018_12_31_FY: Float
+  _2019_12_31_FY: Float
+  _2020_12_31_FY: Float
+  _2021_12_31_FY: Float
+  _2022_12_31_FY: Float
 }
 
-"aggregated selection of \"intsosdataset.finance\"" 
-type intsosdataset_finance_aggregate { aggregate: intsosdataset_finance_aggregate_fields
-  nodes: [intsosdataset_finance!]!
+"aggregate variance on columns" 
+type intsosdataset_ISOS_goog_income_statement_annual_variance_fields { _2018_12_31_FY: Float
+  _2019_12_31_FY: Float
+  _2020_12_31_FY: Float
+  _2021_12_31_FY: Float
+  _2022_12_31_FY: Float
 }
 
-"columns and relationships of \"intsosdataset.finance\"" 
-type intsosdataset_finance { central_index_key: Int
-  company_name: String
-  date_accepted: Timestamp
-  date_filed: Int
-  ein: String
-  fiscal_period_focus: String
-  fiscal_year: Int
-  fiscal_year_end: String
-  form: String
-  measure_tag: String!
-  number_of_quarters: Int!
-  period_end_date: String!
-  sic: String
-  submission_number: String!
-  units: String!
-  value: Float
-  version: String!
+"aggregated selection of \"intsosdataset.ISOS_goog_balance_sheet_statement_annual\"" 
+type intsosdataset_ISOS_goog_balance_sheet_statement_annual_aggregate { aggregate: intsosdataset_ISOS_goog_balance_sheet_statement_annual_aggregate_fields
+  nodes: [intsosdataset_ISOS_goog_balance_sheet_statement_annual!]!
+}
+
+"aggregated selection of \"intsosdataset.ISOS_goog_income_statement_annual\"" 
+type intsosdataset_ISOS_goog_income_statement_annual_aggregate { aggregate: intsosdataset_ISOS_goog_income_statement_annual_aggregate_fields
+  nodes: [intsosdataset_ISOS_goog_income_statement_annual!]!
+}
+
+"columns and relationships of \"intsosdataset.ISOS_goog_balance_sheet_statement_annual\"" 
+type intsosdataset_ISOS_goog_balance_sheet_statement_annual { _2018_12_31_FY: Int
+  _2019_12_31_FY: Int
+  _2020_12_31_FY: Int
+  _2021_12_31_FY: Int
+  _2022_12_31_FY: Int
+  date: String
+  string_field_1: String
+}
+
+"columns and relationships of \"intsosdataset.ISOS_goog_income_statement_annual\"" 
+type intsosdataset_ISOS_goog_income_statement_annual { _2018_12_31_FY: Float
+  _2019_12_31_FY: Float
+  _2020_12_31_FY: Float
+  _2021_12_31_FY: Float
+  _2022_12_31_FY: Float
+  date: String
+  string_field_1: String
 }
 
 enum __TypeKind {ENUM 
@@ -248,41 +357,38 @@ desc
 desc_nulls_last 
 }
 
-"select columns of table \"intsosdataset.finance\"" 
-enum intsosdataset_finance_select_column {"column name" 
-central_index_key 
+"select columns of table \"intsosdataset.ISOS_goog_balance_sheet_statement_annual\"" 
+enum intsosdataset_ISOS_goog_balance_sheet_statement_annual_select_column {"column name" 
+_2018_12_31_FY 
   "column name" 
-company_name 
+_2019_12_31_FY 
   "column name" 
-date_accepted 
+_2020_12_31_FY 
   "column name" 
-date_filed 
+_2021_12_31_FY 
   "column name" 
-ein 
+_2022_12_31_FY 
   "column name" 
-fiscal_period_focus 
+date 
   "column name" 
-fiscal_year 
+string_field_1 
+}
+
+"select columns of table \"intsosdataset.ISOS_goog_income_statement_annual\"" 
+enum intsosdataset_ISOS_goog_income_statement_annual_select_column {"column name" 
+_2018_12_31_FY 
   "column name" 
-fiscal_year_end 
+_2019_12_31_FY 
   "column name" 
-form 
+_2020_12_31_FY 
   "column name" 
-measure_tag 
+_2021_12_31_FY 
   "column name" 
-number_of_quarters 
+_2022_12_31_FY 
   "column name" 
-period_end_date 
+date 
   "column name" 
-sic 
-  "column name" 
-submission_number 
-  "column name" 
-units 
-  "column name" 
-value 
-  "column name" 
-version 
+string_field_1 
 }
 
 "Boolean expression to compare columns of type \"Float\". All fields are combined with logical 'AND'." 
@@ -325,57 +431,48 @@ _nlike: String
 _like: String
 }
 
-"Boolean expression to compare columns of type \"Timestamp\". All fields are combined with logical 'AND'." 
-input Timestamp_BigQuery_comparison_exp {_eq: Timestamp
-  _gt: Timestamp
-  _gte: Timestamp
-  _in: [Timestamp!]
-  _is_null: Boolean
-  _lt: Timestamp
-  _lte: Timestamp
-  _neq: Timestamp
-  _nin: [Timestamp!]
+"Boolean expression to filter rows from the table \"intsosdataset.ISOS_goog_balance_sheet_statement_annual\". All fields are combined with a logical 'AND'." 
+input intsosdataset_ISOS_goog_balance_sheet_statement_annual_bool_exp {_2018_12_31_FY: Int_BigQuery_comparison_exp
+  _2019_12_31_FY: Int_BigQuery_comparison_exp
+  _2020_12_31_FY: Int_BigQuery_comparison_exp
+  _2021_12_31_FY: Int_BigQuery_comparison_exp
+  _2022_12_31_FY: Int_BigQuery_comparison_exp
+  _and: [intsosdataset_ISOS_goog_balance_sheet_statement_annual_bool_exp!]
+  _not: intsosdataset_ISOS_goog_balance_sheet_statement_annual_bool_exp
+  _or: [intsosdataset_ISOS_goog_balance_sheet_statement_annual_bool_exp!]
+  date: String_BigQuery_comparison_exp
+  string_field_1: String_BigQuery_comparison_exp
 }
 
-"Boolean expression to filter rows from the table \"intsosdataset.finance\". All fields are combined with a logical 'AND'." 
-input intsosdataset_finance_bool_exp {_and: [intsosdataset_finance_bool_exp!]
-  _not: intsosdataset_finance_bool_exp
-  _or: [intsosdataset_finance_bool_exp!]
-  central_index_key: Int_BigQuery_comparison_exp
-  company_name: String_BigQuery_comparison_exp
-  date_accepted: Timestamp_BigQuery_comparison_exp
-  date_filed: Int_BigQuery_comparison_exp
-  ein: String_BigQuery_comparison_exp
-  fiscal_period_focus: String_BigQuery_comparison_exp
-  fiscal_year: Int_BigQuery_comparison_exp
-  fiscal_year_end: String_BigQuery_comparison_exp
-  form: String_BigQuery_comparison_exp
-  measure_tag: String_BigQuery_comparison_exp
-  number_of_quarters: Int_BigQuery_comparison_exp
-  period_end_date: String_BigQuery_comparison_exp
-  sic: String_BigQuery_comparison_exp
-  submission_number: String_BigQuery_comparison_exp
-  units: String_BigQuery_comparison_exp
-  value: Float_BigQuery_comparison_exp
-  version: String_BigQuery_comparison_exp
+"Boolean expression to filter rows from the table \"intsosdataset.ISOS_goog_income_statement_annual\". All fields are combined with a logical 'AND'." 
+input intsosdataset_ISOS_goog_income_statement_annual_bool_exp {_2018_12_31_FY: Float_BigQuery_comparison_exp
+  _2019_12_31_FY: Float_BigQuery_comparison_exp
+  _2020_12_31_FY: Float_BigQuery_comparison_exp
+  _2021_12_31_FY: Float_BigQuery_comparison_exp
+  _2022_12_31_FY: Float_BigQuery_comparison_exp
+  _and: [intsosdataset_ISOS_goog_income_statement_annual_bool_exp!]
+  _not: intsosdataset_ISOS_goog_income_statement_annual_bool_exp
+  _or: [intsosdataset_ISOS_goog_income_statement_annual_bool_exp!]
+  date: String_BigQuery_comparison_exp
+  string_field_1: String_BigQuery_comparison_exp
 }
 
-"Ordering options when selecting data from \"intsosdataset.finance\"." 
-input intsosdataset_finance_order_by {central_index_key: order_by
-  company_name: order_by
-  date_accepted: order_by
-  date_filed: order_by
-  ein: order_by
-  fiscal_period_focus: order_by
-  fiscal_year: order_by
-  fiscal_year_end: order_by
-  form: order_by
-  measure_tag: order_by
-  number_of_quarters: order_by
-  period_end_date: order_by
-  sic: order_by
-  submission_number: order_by
-  units: order_by
-  value: order_by
-  version: order_by
+"Ordering options when selecting data from \"intsosdataset.ISOS_goog_balance_sheet_statement_annual\"." 
+input intsosdataset_ISOS_goog_balance_sheet_statement_annual_order_by {_2018_12_31_FY: order_by
+  _2019_12_31_FY: order_by
+  _2020_12_31_FY: order_by
+  _2021_12_31_FY: order_by
+  _2022_12_31_FY: order_by
+  date: order_by
+  string_field_1: order_by
+}
+
+"Ordering options when selecting data from \"intsosdataset.ISOS_goog_income_statement_annual\"." 
+input intsosdataset_ISOS_goog_income_statement_annual_order_by {_2018_12_31_FY: order_by
+  _2019_12_31_FY: order_by
+  _2020_12_31_FY: order_by
+  _2021_12_31_FY: order_by
+  _2022_12_31_FY: order_by
+  date: order_by
+  string_field_1: order_by
 }
